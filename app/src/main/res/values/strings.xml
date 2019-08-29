@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">8.28PracticeDemo</string>
+    <string name="login_tittle">欢迎登录</string>
+    <string name="usename">请输入账号</string>
+    <string name="password">请输入密码</string>
+    <string name="keep_password">记住密码</string>
+    <string name="login">登录</string>
+    <string name="regster">注册</string>
+</resources>

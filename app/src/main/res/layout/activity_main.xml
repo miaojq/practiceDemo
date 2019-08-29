@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_login_tittle"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/login_tittle"
+        android:textSize="30dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginLeft="@dimen/frame_margin"
+        android:layout_marginTop="@dimen/frame_margin"
+        android:layout_marginRight="@dimen/frame_margin"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edt_username"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/editshape"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="@dimen/frame_margin"
+            android:layout_marginRight="@dimen/frame_margin"
+            android:hint="@string/usename"
+            />
+        <EditText
+            android:id="@+id/edt_password"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/editshape"
+            android:layout_marginTop="@dimen/frame_margin"
+            android:layout_marginLeft="@dimen/frame_margin"
+            android:layout_marginRight="@dimen/frame_margin"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/frame_margin"
+            android:layout_marginLeft="@dimen/frame_margin"
+            android:text="@string/keep_password"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/frame_margin"
+            android:layout_marginLeft="@dimen/frame_margin"
+            android:layout_marginRight="@dimen/frame_margin"
+            android:gravity="center_vertical">
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_shape"
+                android:text="@string/login"
+                android:textColor="@color/colorWhite"
+                android:layout_marginLeft="@dimen/frame_margin"/>
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_shape"
+                android:layout_toRightOf="@id/btn_login"
+                android:layout_marginLeft="120dp"
+                android:text="@string/regster"
+                android:textColor="@color/colorWhite"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
