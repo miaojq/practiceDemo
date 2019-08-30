@@ -55,7 +55,7 @@ public class ContentRecyclerAdapter extends RecyclerView.Adapter<ContentRecycler
         return 3;
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder{
+    static class ViewHolder extends RecyclerView.ViewHolder{
         ImageView imgView;
         TextView txtView;
         public ViewHolder(@NonNull View itemView) {

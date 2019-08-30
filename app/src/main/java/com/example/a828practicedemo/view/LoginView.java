@@ -5,5 +5,6 @@ public interface LoginView {
     void successLogin(String msg);
     void failLogin(String msg);
     void skip();
+    void saveUserInfo(String username,String password);
 
 }

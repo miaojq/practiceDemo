@@ -19,16 +19,15 @@ public class LoginPresentImpl implements LoginPresent {
         else if (loginModel.getPassword().isEmpty()||loginModel.getPassword()==""){
             loginView.failLogin("密码不能为空");
         }
-        else if (!loginModel.getPassword().equals("123456")){
+        else if (!loginModel.getUsername().equals("123456")){
             loginView.failLogin("账号错误");
         }
-        else if(!loginModel.getUsername().equals("123")){
+        else if(!loginModel.getPassword().equals("123")){
             loginView.failLogin("密码错误");
 
         }else {
             loginView.successLogin("登陆成功");
             loginView.skip();
-
         }
 
     }

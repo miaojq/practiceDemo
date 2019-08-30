@@ -14,7 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="@string/login_tittle"
-        android:textSize="30dp"/>
+        android:textSize="30dp"
+        android:layout_marginTop="@dimen/tittle_maginTop"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,6 +34,7 @@
             android:layout_marginLeft="@dimen/frame_margin"
             android:layout_marginRight="@dimen/frame_margin"
             android:hint="@string/usename"
+            android:padding="10dp"
             />
         <EditText
             android:id="@+id/edt_password"
@@ -43,40 +45,54 @@
             android:layout_marginLeft="@dimen/frame_margin"
             android:layout_marginRight="@dimen/frame_margin"
             android:hint="@string/password"
+            android:padding="10dp"
             android:inputType="textPassword"
             />
         <CheckBox
+            android:id="@+id/cbx_rememberPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/frame_margin"
             android:layout_marginLeft="@dimen/frame_margin"
             android:text="@string/keep_password"/>
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="@dimen/frame_margin"
             android:layout_marginLeft="@dimen/frame_margin"
             android:layout_marginRight="@dimen/frame_margin"
-            android:gravity="center_vertical">
-            <Button
-                android:id="@+id/btn_login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/login_shape"
-                android:text="@string/login"
-                android:textColor="@color/colorWhite"
-                android:layout_marginLeft="@dimen/frame_margin"/>
-            <Button
-                android:id="@+id/btn_register"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/login_shape"
-                android:layout_toRightOf="@id/btn_login"
-                android:layout_marginLeft="120dp"
-                android:text="@string/regster"
-                android:textColor="@color/colorWhite"/>
-
-        </RelativeLayout>
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+                <Button
+                    android:id="@+id/btn_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login_shape"
+                    android:text="@string/login"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginLeft="@dimen/frame_margin"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+                <Button
+                    android:id="@+id/btn_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login_shape"
+                    android:text="@string/regster"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginRight="@dimen/frame_margin"
+                    />
+            </LinearLayout>
+        </LinearLayout>
 
 
     </LinearLayout>

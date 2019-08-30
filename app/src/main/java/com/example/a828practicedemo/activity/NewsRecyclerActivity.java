@@ -23,22 +23,24 @@ public class NewsRecyclerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news_recycler);
-        setContentView(R.layout.activity_news_recycler);
         initData();
         recyclerView=(RecyclerView)findViewById(R.id.recycler_news);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-//        加载适配器。
-        recyclerView.setAdapter(new NewsRecyclerAdapter(this,strings));
+        recyclerView.setAdapter(new NewsRecyclerAdapter(this,strings,contentBeans));
 
     }
 //添加数据
     private void initData(){
         contentBean=new ContentBean();
         contentBeans=new ArrayList<>();
+        strings=new ArrayList<>();
         for (int i = 0; i <10; i++) {
 
             strings.add("新闻"+i);
-            
+
+        }
+        for (int i = 0; i <30 ; i++) {
+
             contentBean.setSubstance("内容"+i);
             contentBean.setImgNews(R.drawable.ic_launcher_background);
 
